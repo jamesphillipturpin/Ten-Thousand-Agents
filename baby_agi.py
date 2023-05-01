@@ -14,15 +14,16 @@ from langchain.experimental import BabyAGI
 from langchain.vectorstores import FAISS
 from langchain.docstore import InMemoryDocstore
 
-# Define your embedding model
-embeddings_model = OpenAIEmbeddings()
 # Initialize the vectorstore as empty
 import faiss
+
+# Define your embedding model
+embeddings_model = OpenAIEmbeddings()
 
 # Argument Parser
 parser = argparse.ArgumentParser(description='Retrieval Question Answering with Sources')
 parser.add_argument('-f', '--filename', type=str, default=f"agi_output.txt", help='file to save seession to')
-parser.add_argument('-q', '--objective', type=str, default=f"Do something benneficial.", help='Objective of artificial general intelligence.')
+parser.add_argument('-o', '--objective', type=str, default=f"Do something benneficial.", help='Objective of artificial general intelligence.')
 
 parser.add_argument('-t', '--temp', type=float, default=0, help='temperature for OpenAI API, (range: 0 to 2) (default: 0)')
 
