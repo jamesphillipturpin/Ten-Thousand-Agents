@@ -17,7 +17,7 @@ This script answer questions with sources over an Index. It does this by using t
 
 # Installation
 
-If you do not have Python, Git, and Pip I stalled, install those first.
+If you do not have Python, Git, and Pip installed, install those first.
 
 '''
 git clone https://github.com/jamesphillipturpin/answer_question_from_source.git
