@@ -19,21 +19,21 @@ This script answer questions with sources over an Index. It does this by using t
 
 If you do not have Python, Git, and Pip installed, install those first.
 
-'''
+```
 git clone https://github.com/jamesphillipturpin/answer_question_from_source.git
 cd answer_question_from_source
 pip install -r requirements.txt
-'''
+```
 
 # Example run:
 
 At the command prompt, type
-'''
+```
 Python answer_question_from_source.py --question="What is the Paycheck Fairness Act?" --path="https://en.wikipedia.org/wiki/Paycheck_Fairness_Act" --temp=1
-'''
+```
 
 The output may be something like this.
-'''
+```
 Reading source docuements from:
 https://en.wikipedia.org/wiki/Paycheck_Fairness_Act
 
@@ -54,4 +54,4 @@ Asking the AI the following question:
 What is the Paycheck Fairness Act?
 
 {'answer': ' The Paycheck Fairness Act is a proposed United States labor law that would add procedural protections to the Equal Pay Act of 1963 and the Fair Labor Standards Act as part of an effort to address the gender pay gap in the United States. It would limit exceptions to the prohibition for a wage rate differential based on any other factor other than sex to bona fide factors, such as education, training, or experience. It would also punish employers for retaliating against workers who share wage information, put the justification burden on employers as to why someone is paid less, and allow workers to sue for punitive damages of wage discrimination.\n', 'sources': '0-pl, 3-pl, 9-pl'}
-'''
+```
