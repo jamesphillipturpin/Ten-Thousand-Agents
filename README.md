@@ -15,6 +15,16 @@ If no source is given, the knowledge is based on the language model not the sour
 
 This script answer questions with sources over an Index. It does this by using the RetrievalQAWithSourcesChain, which does the lookup of the documents from an Index.
 
+# Installation
+
+If you do not have Python, Git, and Pip I stalled, install those first.
+
+'''
+git clone https://github.com/jamesphillipturpin/answer_question_from_source.git
+cd answer_question_from_source
+pip install -r requirements.txt
+'''
+
 # Example run:
 
 C:\Python310\answer_question_from_source>Python answer_question_from_source.py --question="What is the Paycheck Fairness Act?" --path="https://en.wikipedia.org/wiki/Paycheck_Fairness_Act" --temp=1
