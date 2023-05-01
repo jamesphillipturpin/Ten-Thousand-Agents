@@ -1,4 +1,4 @@
-#Answer Questions from Source
+# Answer Questions from Source
 
 This script answers questions based on sources you provide. The sources can be a single file, or a folder. Sources can be text files, web pages, or PDFs. They can be files on your computer or they can be webpages. You can specify a list of extensions to include, in which case other files will be excluded.
 
@@ -15,7 +15,7 @@ If no source is given, the knowledge is based on the language model not the sour
 
 This script answer questions with sources over an Index. It does this by using the RetrievalQAWithSourcesChain, which does the lookup of the documents from an Index.
 
-#Example run:
+# Example run:
 
 C:\Python310\answer_question_from_source>Python answer_question_from_source.py --question="What is the Paycheck Fairness Act?" --path="https://en.wikipedia.org/wiki/Paycheck_Fairness_Act" --temp=1
 Reading source docuements from:
