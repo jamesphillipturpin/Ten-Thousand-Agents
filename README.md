@@ -1,4 +1,4 @@
-# Answer Questions from Source
+## Answer Questions from Source
 
 This script answers questions based on sources you provide. The sources can be a single file, or a folder. Sources can be text files, web pages, or PDFs. They can be files on your computer or they can be webpages. You can specify a list of extensions to include, in which case other files will be excluded.
 
@@ -15,17 +15,17 @@ If no source is given, the knowledge is based on the language model not the sour
 
 This script answer questions with sources over an Index. It does this by using the RetrievalQAWithSourcesChain, which does the lookup of the documents from an Index.
 
-# Installation
+### Installation
 
 If you do not have Python, Git, and Pip installed, install those first.
 
 ```
-git clone https://github.com/jamesphillipturpin/answer_question_from_source.git
-cd answer_question_from_source
+git clone https://github.com/jamesphillipturpin/Ten-Thousand-Agents.git
+cd ten-thousand-agents
 pip install -r requirements.txt
 ```
 
-# Example run:
+### Example run:
 
 At the command prompt, type
 ```
@@ -54,4 +54,55 @@ Asking the AI the following question:
 What is the Paycheck Fairness Act?
 
 {'answer': ' The Paycheck Fairness Act is a proposed United States labor law that would add procedural protections to the Equal Pay Act of 1963 and the Fair Labor Standards Act as part of an effort to address the gender pay gap in the United States. It would limit exceptions to the prohibition for a wage rate differential based on any other factor other than sex to bona fide factors, such as education, training, or experience. It would also punish employers for retaliating against workers who share wage information, put the justification burden on employers as to why someone is paid less, and allow workers to sue for punitive damages of wage discrimination.\n', 'sources': '0-pl, 3-pl, 9-pl'}
+```
+
+
+## Baby Artificial General Intelligence
+
+The baby_agi.py script takes an objective and cycles through three stages:
+1. Make a To-Do list
+2. Research the next step on the to-do list
+3. Execute the next step on the to-do list
+
+### Installation
+
+The baby general intelligence installation is somewhat more involved than
+the answer_question_from_source.py script. This is because it depends on
+the faiss module, which is in alpha development and has minimal support,
+especially for Windows.
+
+Below is the installation procedure I used to install on Windows. If you want
+to try to install the module to be compatible with GPU, you can try omitting
+the line that contains "faiss-cpu=". However, it is expected on Windows that 
+installation of faiss will fail in that case, because GPU support of faiss 
+for Windows has not been added.
+
+First install Microconda (or Anaconda).
+Run Microconda (or Anaconda) as administrator
+```
+conda create -n faiss_1.7.3 python=3.8
+conda activate faiss_1.7.3
+conda install pytorch==1.11.0 cudatoolkit=11.3 -c pytorch
+conda install numpy
+conda install -c pytorch faiss-gpu=1.7.3 cudatoolkit=11.3
+conda install -c conda-forge notebook
+conda install -y matplotlib
+conda install -c pytorch faiss-cpu=1.7.3 cudatoolkit=11.3
+conda install faiss
+conda install re
+pip install langchain
+pip install pydantic
+pip install openai
+```
+
+### Example usage
+Download or clone the jamesphillipturpin/ten-thousand-agents repository.
+Run Microconda (or Anaconda).
+Actiave the faiss_1.7.2 environment by typing this into the Anaconda Powershell Prompt:
+```
+conda activate faiss_1.7.3
+```
+Then navigate to the ten-thousand-agents repository folder.
+```
+python -m baby_agi.py --objective="Do something benneficial." 
 ```
